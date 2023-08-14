@@ -1,0 +1,9 @@
+char * categorizeBox(int length, int width, int height, int mass){
+    if(mass >= 100 && (((int64_t)length*(int64_t)width*(int64_t)height) >= 1e9 || length >= 1e4 || width >= 1e4 || height >= 1e4))
+        return "Both";
+    if(mass >= 100)
+        return "Heavy";    
+    if((((int64_t)length*(int64_t)width*(int64_t)height) >= 1e9 || length >= 1e4 || width >= 1e4 || height >= 1e4))
+        return "Bulky";
+    return "Neither";   
+}
